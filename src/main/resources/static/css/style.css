@@ -1,0 +1,128 @@
+body{
+  background: #212121;
+}
+h1{
+  text-align: center;
+  color: #fff;
+}
+.clearfix{
+  clear: both;
+}
+#box{
+  width: 350px;
+  overflow: auto;
+  margin: 40px auto;
+  background: #666;
+  padding-bottom: 40px;
+  border-radius: 10px;
+}
+#message{
+  background: #333;
+  color: #fff;
+}
+#matchup{
+  background: #333;
+  color: #fff;
+}
+
+#gameboard {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.box {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--orange);
+    font-size: 120px;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+}
+#reset{
+  border: 0;
+  background: #444;
+  color: #fff;
+  width: 70%;
+  padding: 15px;
+  border-radius: 5px;
+}
+.o{
+  color: green !important;
+}
+.x{
+  color: red !important;
+}
+footer{
+  display: block;
+  text-align: center;
+  padding-top: 20px;
+}
+
+/* default styling. Nothing to do with freexing first row and column */
+main {display: flex;}
+main > * {border: 1px solid;}
+table {border-collapse: collapse; font-family: helvetica; align-items: center;}
+td, th {border:  1px solid;
+      padding: 10px;
+      min-width: 20px;
+      background: white;
+      box-sizing: border-box;
+      text-align: left;
+}
+.table-container {
+  position: relative;
+  max-height:  30px;
+  width: 500px;
+  overflow: scroll;
+}
+
+thead th {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: hsl(20, 50%, 70%);
+}
+
+thead th:first-child {
+  left: 0;
+  z-index: 3;
+}
+
+tfoot {
+  position: -webkit-sticky;
+  bottom: 0;
+  z-index: 2;
+}
+
+tfoot td {
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+  background: hsl(20, 50%, 70%);
+}
+
+tfoot td:first-child {
+  z-index: 3;
+}
+
+tbody {
+  align-items: center;
+  overflow: scroll;
+  height: 200px;
+  text-align: center;
+}
+.content-table {
+    margin: 0 auto;
+}
+.content-table td {
+    text-align: center;
+}
+tbody tr{
+background-color: #D6EEEE;
+}
+
