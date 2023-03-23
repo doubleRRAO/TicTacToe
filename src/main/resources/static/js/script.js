@@ -168,14 +168,16 @@ function match_history_table(games){
     if(games != null){
 
         const tbody = document.getElementById("matchHistory");
-        console.log("tbody isinya "+tbody);
-        console.log("location is "+location);
+
+        if(tbody.hasChildNodes()){
+            tbody.innerHTML='';
+        }
 
         const trHeader = document.createElement("tr");
 
-        const tdh1 = document.createElement("td");
-        tdh1.innerHTML = "No.";
-        trHeader.appendChild(tdh1);
+//        const tdh1 = document.createElement("td");
+//        tdh1.innerHTML = "No.";
+//        trHeader.appendChild(tdh1);
 
         const tdh2 = document.createElement("td");
         tdh2.innerHTML = "Game Id";
@@ -200,9 +202,9 @@ function match_history_table(games){
             var game = games[i];
             var no = i+1;
 
-            const td1 = document.createElement("td");
-            td1.innerHTML = no;
-            tr.appendChild(td1);
+//            const td1 = document.createElement("td");
+//            td1.innerHTML = no;
+//            tr.appendChild(td1);
 
             const td2 = document.createElement("td");
             td2.innerHTML = game.gameId;
@@ -223,7 +225,7 @@ function match_history_table(games){
                 td5.innerHTML = "Player1(" + player1Name +") Won!!!";
                 message.innerHTML = "O(" + player1Name +") Won!!!";
             } else if(gameStat == "X_WON"){
-                td5.innerHTML = "Player1(" + player1Name +") Won!!!";
+                td5.innerHTML = "Player2(" + player2Name +") Won!!!";
             } else {
                 td5.innerHTML = gameStat;
             }
