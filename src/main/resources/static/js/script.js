@@ -148,13 +148,11 @@ function getResult(result){
 }
 
 function match_history(){
-    console.log("requesting match-history");
     $.ajax({
                 url: url + "/game/match-history",
                 type: 'GET',
                 contentType: "application/json",
                 success: function (data) {
-                    console.log(data);
                     match_history_table(data.games);
                 },
                 error: function (error) {
@@ -164,7 +162,6 @@ function match_history(){
 }
 
 function match_history_table(games){
-    console.log("setting up table for match history");
     if(games != null){
 
         const tbody = document.getElementById("matchHistory");
